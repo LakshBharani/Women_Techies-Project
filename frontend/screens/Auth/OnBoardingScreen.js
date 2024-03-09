@@ -14,7 +14,7 @@ const OnBoardingScreen = () => {
     </SafeAreaView>
   );
 };
-
+ahsdhad
 export default OnBoardingScreen;
 
 const styles = StyleSheet.create({
