@@ -1,17 +1,36 @@
-import { Pressable, StyleSheet, Text, View, SafeAreaView } from "react-native";
+import {
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  Image,
+} from "react-native";
 import React from "react";
+import { Colors } from "../../constants/colors";
+import ContentView from "../../components/onboarding/ContentView";
 
-const OnBoardingScreen = () => {
+const OnBoardingScreen = ({ navigation }) => {
   return (
-    <SafeAreaView style={styles.root}>
-      <View style={styles.imageView}></View>
-      <View style={styles.contentView}>
-        <Text style={styles.title}>UniHitch</Text>
-        <Pressable style={styles.btn}>
-          <Text style={styles.btnText}>Get Started</Text>
-        </Pressable>
-      </View>
-    </SafeAreaView>
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: Colors.lightMode.secondaryAccent,
+      }}
+    >
+      <SafeAreaView style={{ flex: 1 }}>
+        <View style={styles.imageView}>
+          <Image
+            source={require("../../assets/onboarding.gif")}
+            style={{
+              width: "100%",
+              height: "100%",
+            }}
+          />
+        </View>
+      </SafeAreaView>
+      <ContentView />
+    </View>
   );
 };
 export default OnBoardingScreen;
@@ -21,6 +40,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: Colors.lightMode.primary500,
   },
   imageView: {
     flex: 1,
@@ -28,29 +48,5 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     justifyContent: "center",
     alignItems: "center",
-  },
-  contentView: {
-    flex: 1,
-    width: "100%",
-    paddingBottom: 50,
-    justifyContent: "flex-end",
-    alignItems: "center",
-  },
-  title: {
-    fontSize: 40,
-    fontWeight: "bold",
-    paddingBottom: 50,
-  },
-  btn: {
-    width: "60%",
-    backgroundColor: "white",
-    padding: 10,
-    alignItems: "center",
-    borderRadius: 10,
-    borderWidth: 2,
-  },
-  btnText: {
-    fontSize: 18,
-    fontWeight: "bold",
   },
 });
