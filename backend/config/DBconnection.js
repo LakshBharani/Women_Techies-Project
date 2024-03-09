@@ -8,5 +8,6 @@ const dbconnections = async() =>{
         console.log(error)
     }
 };
+iki
 
 module.exports = dbconnections;
