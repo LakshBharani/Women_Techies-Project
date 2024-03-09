@@ -1,13 +1,14 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const dbconnections = async() =>{
-    try {
-        await mongoose.connect(process.env.APP_MONGODB_URL);
-        console.log("MongoDB Connected .......")
-    } catch (error) {
-        console.log(error)
-    }
+const mongoUrl = "mongodb+srv://sohammaha15:sm123456@cluster0.fdtfvyj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
+const dbconnection = async () => {
+  try {
+    await mongoose.connect(mongoUrl);
+    console.log("MongoDB Connected ....");
+  } catch (error) {
+    console.log(error);
+  }
 };
-iki
 
-module.exports = dbconnections;
+module.exports = dbconnection;
