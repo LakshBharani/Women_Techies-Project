@@ -1,13 +1,13 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const dbconnections = async () => {
-  try {
-    await mongoose.connect(process.env.APP_MONGODB_URL);
-    console.log("MongoDB Connected .......");
-  } catch (error) {
-    console.log(error);
-  }
+const dbconnections = async() =>{
+    try {
+        await mongoose.connect(process.env.APP_MONGODB_URL);
+        console.log("MongoDB Connected .......")
+    } catch (error) {
+        console.log(error)
+    }
 };
-iki;
+iki
 
 module.exports = dbconnections;
