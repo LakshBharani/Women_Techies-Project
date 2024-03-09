@@ -15,6 +15,7 @@ const OnBoardingScreen = () => {
   );
 };
 
+
 export default OnBoardingScreen;
 
 const styles = StyleSheet.create({
