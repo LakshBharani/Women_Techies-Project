@@ -46,6 +46,38 @@ app.post("/register", async (req, res) => {
   }
 });
 
+app.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+  try {
+    const emailExists = await User.findOne({ email: email });
+
+    if (!emailExists) {
+      throw new Error("User does not exist! Please Register!");
+    }
+
+    const user = await User.findOne({ email: email });
+
+    const userPassword = user?.password;
+
+    if(userPassword!=password){
+      throw new Error("Password does not match");
+    }
+
+    const data = {
+      id: user?._id
+    }
+
+    user.password= undefined;
+
+    res.status(200).json({success:true,user});
+  } catch (error) {
+    res.status(401).json({
+      success: false,
+      message: error.message,
+    });
+  }
+});
+
 app.listen(5001, () => {
   console.log("Server is running ");
 });
