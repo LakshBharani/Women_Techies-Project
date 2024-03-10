@@ -32,6 +32,6 @@ Introducing UniHitch: The go-to ride-sharing app for VIT Vellore students. Easil
 
 UniHitch is still a work in progress, and there may be a few incomplete sections as we continue to refine and enhance the app. Thank you for your patience and support as we strive to provide you with the best ride-sharing experience at VIT Vellore!
 
-![WhatsApp Image 2024-03-10 at 12 13 13 (1)](https://github.com/LakshBharani/Women_Techies-Project/assets/134390548/d3bcfbd7-995d-4d87-a6f3-45025a84504d)
-![WhatsApp Image 2024-03-10 at 12 13 13 (3)](https://github.com/LakshBharani/Women_Techies-Project/assets/134390548/f1a99b3b-c95b-467d-9f55-99e2b533256b)
-![WhatsApp Image 2024-03-10 at 12 13 12](https://github.com/LakshBharani/Women_Techies-Project/assets/134390548/1dc6ce8b-bf7b-4636-b6c3-f3d26cb197e6)
+
+<img width="429" alt="Screenshot 2024-03-10 at 1 07 45 PM" src="https://github.com/LakshBharani/Women_Techies-Project/assets/134390548/fdd29650-6616-403e-bd7e-bee255c9be3c">
+<img width="581" alt="Screenshot 2024-03-10 at 1 08 09 PM" src="https://github.com/LakshBharani/Women_Techies-Project/assets/134390548/f2dfd4c8-6ff6-465e-80fe-59d65e643ecc">
