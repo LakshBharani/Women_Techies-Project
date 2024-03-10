@@ -23,7 +23,7 @@ require("./Users");
 const User = mongoose.model("UserInfo");
 
 app.post("/register", async (req, res) => {
-  const { name, email, mobile, password } = req.body;
+  const { name, email, mobile, password,gender } = req.body;
   try {
     const oldUser = await User.findOne({ email: email });
 
@@ -36,6 +36,7 @@ app.post("/register", async (req, res) => {
       email: email,
       mobile: mobile,
       password: password,
+      gender:gender,
     });
     res.status(200).json({ success: true, createdUser });
   } catch (error) {
