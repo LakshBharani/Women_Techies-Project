@@ -1,11 +1,22 @@
 import { StyleSheet, Text, SafeAreaView } from "react-native";
 import React from "react";
-import BackButton from "../../components/BackButton";
-import CustomTextField from "../../components/Auth/CustomTextField";
-import CustomButton from "../../components/onboarding/CustomButton";
-import { Colors } from "../../constants/colors";
+import BackButton from "../../../components/BackButton";
+import CustomTextField from "../../../components/CustomTextField";
+import CustomButton from "../../../components/onboarding/CustomButton";
+import { Colors } from "../../../constants/colors";
+import axios from "axios";
 
 const SigninScreen = () => {
+  const onPressHandler = () => {
+    axios
+      .post("http://localhost:5001/login", {
+        email: "johndoe@gmail.com",
+        password: "abc123",
+      })
+      .then((res) => console.log(res.data))
+      .catch((err) => console.log(err));
+  };
+
   return (
     <SafeAreaView style={styles.root}>
       <BackButton />
@@ -19,9 +30,10 @@ const SigninScreen = () => {
         style={{ marginTop: 20 }}
         label={"Continue"}
         centerTitle={true}
-        bgColor={Colors.lightMode.primary500}
+        bgColor={Colors.primary500}
         labelColor={"white"}
         screenToNavigateTo={"Home"}
+        onPressHandler={onPressHandler}
       />
     </SafeAreaView>
   );

@@ -1,12 +1,26 @@
 import { StyleSheet, Text, View, SafeAreaView, Pressable } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import CustomTextField from "../../../components/Auth/CustomTextField";
+import CustomTextField from "../../../components/CustomTextField";
 import GenderPicker from "../../../components/Auth/GenderPicker";
 import BackButton from "../../../components/BackButton";
 import CustomButton from "../../../components/onboarding/CustomButton";
 import { Colors } from "../../../constants/colors";
+import React from "react";
+import axios from "axios";
 
 const SignupScreen = () => {
+  const onPressHandler = () => {
+    axios
+      .post("http://localhost:5001/register", {
+        name: "Laksh",
+        email: "laksh@gmail.com",
+        password: "qsdasd",
+        gender: "Male",
+      })
+      .then((res) => console.log(res.data))
+      .catch((err) => console.log(err));
+  };
+
   return (
     <View style={styles.root}>
       <SafeAreaView style={styles.container}>
@@ -26,7 +40,7 @@ const SignupScreen = () => {
           <Ionicons
             name="checkmark-circle-outline"
             size={24}
-            color={Colors.lightMode.primary500}
+            color={Colors.primary500}
           />
           <Text style={styles.privPolicyText}>
             By signing up. you agree to the Terms of service and Privacy Policy.
@@ -35,9 +49,10 @@ const SignupScreen = () => {
         <CustomButton
           label={"Sign Up"}
           labelColor={"white"}
-          bgColor={Colors.lightMode.primary500}
+          bgColor={Colors.primary500}
           centerTitle={true}
           screenToNavigateTo={"Home"}
+          onPressHandler={onPressHandler}
         />
       </SafeAreaView>
     </View>

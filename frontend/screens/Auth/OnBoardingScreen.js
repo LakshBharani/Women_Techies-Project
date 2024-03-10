@@ -20,18 +20,18 @@ const OnBoardingScreen = () => {
       </View>
       <View style={styles.buttons}>
         <CustomButton
-          label={"Create an account"}
+          label={"Sign up now for hassle-free rides"}
           labelColor={"white"}
-          bgColor={Colors.lightMode.primary500}
-          borderColor={Colors.lightMode.primary500}
+          bgColor={Colors.primary500}
+          borderColor={Colors.primary500}
           screenToNavigateTo={"Signup"}
           centerTitle={true}
         />
         <CustomButton
           label={"Sign In"}
-          labelColor={Colors.lightMode.primary500}
+          labelColor={Colors.primary500}
           bgColor={"white"}
-          borderColor={Colors.lightMode.primary500}
+          borderColor={Colors.primary500}
           screenToNavigateTo={"Signin"}
           showBorder={true}
           centerTitle={true}

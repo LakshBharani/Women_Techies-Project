@@ -11,11 +11,20 @@ const CustomButton = ({
   showBorder,
   centerTitle,
   style,
+  onPressHandler,
 }) => {
   const navigator = useNavigation();
+
+  const handlePress = () => {
+    onPressHandler?.();
+    if (screenToNavigateTo) {
+      navigator.navigate(screenToNavigateTo);
+    }
+  };
+
   return (
     <Pressable
-      onPress={() => navigator.navigate(screenToNavigateTo)}
+      onPress={handlePress}
       style={({ pressed }) => [
         styles.btn,
         {
