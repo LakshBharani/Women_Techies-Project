@@ -91,18 +91,18 @@ app.post("/login", async (req, res) => {
   }
 });
 
-// app.get("/test",userAuth, async (req, res) => {
-//   const id = req?.user?._id;
-//   try {
-//     console.log(id);
-//     console.log("Test controller working!!")
-//   } catch (error) {
-//     res.status(401).json({
-//       success: false,
-//       message: error.message,
-//     });
-//   }
-// });
+app.get("/test",userAuth, async (req, res) => {
+  const id = req?.user?._id;
+  try {
+    console.log(id);
+    console.log("Test controller working!!")
+  } catch (error) {
+    res.status(401).json({
+      success: false,
+      message: error.message,
+    });
+  }
+});
 
 app.post("/places",async(req,res)=>{
   const id = req?.user?._id;
