@@ -122,4 +122,4 @@ app.post("/places",async(req,res)=>{
 
 app.listen(5001, () => {
   console.log("Server is running ");
-});
+})
