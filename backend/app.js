@@ -119,7 +119,7 @@ app.post("/places",async(req,res)=>{
       message: error.message,
     });
   }
-})
+});
 
 app.listen(5001, () => {
   console.log("Server is running ");
