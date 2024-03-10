@@ -112,7 +112,6 @@ app.post("/places",async(req,res)=>{
       success: true,
       user,
     });
-    
   } catch (error) {
     res.status(401).json({
       success: false,
